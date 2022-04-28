@@ -14,7 +14,7 @@ const Movie = (props) => {
                 {poster === 'N/A' ? (
                     <img
                         className="activator"
-                        src={`https://via.placeholder.com/350x450?text=${title}`}
+                        src={`https://via.placeholder.com/250x400?text=${title}`}
                         alt="title"
                     />
                 ) : (

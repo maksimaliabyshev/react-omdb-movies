@@ -30,3 +30,7 @@ code {
 	top: 0;
 	right: 0.5rem;
 }
+.search-type {
+	display: flex;
+	justify-content: space-evenly;
+}

@@ -3,11 +3,20 @@ import React, { Component } from 'react';
 class Search extends Component {
     state = {
         search: '',
+        type: 'all',
     };
     handleKey = (event) => {
         if (String(event.key).toLocaleLowerCase() === 'enter') {
-            this.props.searchMovies(this.state.search);
+            this.props.searchMovies(this.state.search, this.state.type);
         }
+    };
+    handleFilter = (event) => {
+        this.setState(
+            () => ({ type: event.target.dataset.type }),
+            () => {
+                this.props.searchMovies(this.state.search, this.state.type);
+            }
+        );
     };
     render() {
         return (
@@ -27,11 +36,68 @@ class Search extends Component {
                         <button
                             className="btn search-btn"
                             onClick={() =>
-                                this.props.searchMovies(this.state.search)
+                                this.props.searchMovies(
+                                    this.state.search,
+                                    this.state.type
+                                )
                             }
                         >
                             Search
                         </button>
+                    </div>
+                    <div className="search-type" onClick={this.handleType}>
+                        <p>
+                            <label>
+                                <input
+                                    className="with"
+                                    name="type"
+                                    type="radio"
+                                    data-type="all"
+                                    onChange={this.handleFilter}
+                                    checked={this.state.type === 'all'}
+                                />
+                                <span>All</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input
+                                    className="with"
+                                    name="type"
+                                    type="radio"
+                                    data-type="movie"
+                                    onChange={this.handleFilter}
+                                    checked={this.state.type === 'movie'}
+                                />
+                                <span>Movie</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input
+                                    className="with"
+                                    name="type"
+                                    type="radio"
+                                    data-type="series"
+                                    onChange={this.handleFilter}
+                                    checked={this.state.type === 'series'}
+                                />
+                                <span>Series</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input
+                                    className="with"
+                                    name="type"
+                                    type="radio"
+                                    data-type="game"
+                                    onChange={this.handleFilter}
+                                    checked={this.state.type === 'game'}
+                                />
+                                <span>Game</span>
+                            </label>
+                        </p>
                     </div>
                 </div>
             </div>

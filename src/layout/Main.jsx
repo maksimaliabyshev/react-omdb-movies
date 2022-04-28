@@ -12,8 +12,12 @@ class Main extends Component {
         //     .then((response) => response.json())
         //     .then((data) => this.setState({ movies: data.Search }));
     }
-    searchMovies = (str) => {
-        fetch(`https://www.omdbapi.com/?apikey=ca911b66&s=${str}`)
+    searchMovies = (str, type = 'all') => {
+        fetch(
+            `https://www.omdbapi.com/?apikey=ca911b66&s=${str}${
+                type !== 'all' ? `&type=${type}` : ''
+            }`
+        )
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data.Search))
@@ -21,6 +25,7 @@ class Main extends Component {
             })
             .catch((error) => console.error(error.message));
     };
+
     render() {
         const { movies } = this.state;
         return (
