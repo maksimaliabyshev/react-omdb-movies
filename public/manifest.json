@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React OMDB Movies",
+  "name": "React OMDB Movies App",
   "icons": [
     {
       "src": "favicon.ico",
