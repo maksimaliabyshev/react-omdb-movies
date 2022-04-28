@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-omdb-movies/static/css/main.60ada1f7.css",
+    "main.js": "/react-omdb-movies/static/js/main.6afbb94a.js",
+    "index.html": "/react-omdb-movies/index.html",
+    "main.60ada1f7.css.map": "/react-omdb-movies/static/css/main.60ada1f7.css.map",
+    "main.6afbb94a.js.map": "/react-omdb-movies/static/js/main.6afbb94a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60ada1f7.css",
+    "static/js/main.6afbb94a.js"
+  ]
+}
