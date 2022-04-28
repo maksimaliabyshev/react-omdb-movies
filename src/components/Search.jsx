@@ -34,7 +34,7 @@ class Search extends Component {
                             onKeyDown={this.handleKey}
                         />
                         <button
-                            className="btn search-btn"
+                            className="btn search-btn teal darken-1"
                             onClick={() =>
                                 this.props.searchMovies(
                                     this.state.search,
