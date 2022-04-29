@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-omdb-movies/static/css/main.60ada1f7.css",
-    "main.js": "/react-omdb-movies/static/js/main.6afbb94a.js",
+    "main.js": "/react-omdb-movies/static/js/main.5ce5d1d5.js",
     "index.html": "/react-omdb-movies/index.html",
     "main.60ada1f7.css.map": "/react-omdb-movies/static/css/main.60ada1f7.css.map",
-    "main.6afbb94a.js.map": "/react-omdb-movies/static/js/main.6afbb94a.js.map"
+    "main.5ce5d1d5.js.map": "/react-omdb-movies/static/js/main.5ce5d1d5.js.map"
   },
   "entrypoints": [
     "static/css/main.60ada1f7.css",
-    "static/js/main.6afbb94a.js"
+    "static/js/main.5ce5d1d5.js"
   ]
 }
