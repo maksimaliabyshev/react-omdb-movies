@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Search extends Component {
     state = {
-        search: '',
+        search: 'matrix',
         type: 'all',
     };
     handleKey = (event) => {

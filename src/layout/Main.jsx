@@ -13,9 +13,7 @@ class Main extends Component {
         fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix}`)
             .then((response) => response.json())
             .then((data) => {
-                if (Array.isArray(data.Search))
-                    this.setState({ movies: data.Search, loading: false });
-                this.setState({ loading: false });
+                this.setState({ movies: data.Search, loading: false });
             })
             .catch((error) => console.error(error.message));
     }
@@ -28,9 +26,9 @@ class Main extends Component {
         )
             .then((response) => response.json())
             .then((data) => {
+                this.setState({ movies: [], loading: false });
                 if (Array.isArray(data.Search))
                     this.setState({ movies: data.Search, loading: false });
-                this.setState({ loading: false });
             })
             .catch((error) => console.error(error.message));
     };
